@@ -32,8 +32,9 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-      - name: Build and analyze
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Group-Two-AOOP_Task-04_6e859c30-1ed9-4278-bbd5-5738ad95aff9 -Dsonar.projectName='Task-04/TaskFour'
+      - name: Build and analyze- name: Build and analyze
+        run: |
+          mvn -f TaskFour/pom.xml -B verify \
+           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+           -Dsonar.projectKey=Group-Two-AOOP_Task-04_TaskFour_6e859c30-1ed9-4278-bbd5-5738ad95aff9 \
+           -Dsonar.projectName=TaskFour
