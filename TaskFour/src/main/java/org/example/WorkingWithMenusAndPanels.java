@@ -93,10 +93,10 @@ public class WorkingWithMenusAndPanels {
         panel.setBackground(Color.PINK);
         panel.setLayout(new GridLayout(2, 2, 10, 10));
 
-        panel.add(new JButton("Report 1"));
-        panel.add(new JButton("Report 2"));
-        panel.add(new JButton("Report 3"));
-        panel.add(new JButton("Report 4"));
+        panel.add(new JButton("Report One"));
+        panel.add(new JButton("Report Two"));
+        panel.add(new JButton("Report Three"));
+        panel.add(new JButton("Report Four"));
         return panel;
     }
 
