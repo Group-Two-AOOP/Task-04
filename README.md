@@ -1,1 +1,1 @@
-Added authentication feature 
+Improve UI Styling and Layout Consistency
